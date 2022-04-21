@@ -30,6 +30,10 @@ app.get('/', (req, res) => {
   return res.status(200).sendFile(path.join(__dirname, '../index.html'));
 });
 
+app.get('/api/admin', adminController.getItems, (req, res) => {
+  return res.status(200).json(res.locals.itemsList);
+});
+
 app.post('/admin', adminController.addItem, (req, res) => {
   console.log('req.body received by app.post: ', req.body);
   return res.status(200).json(res.locals.item);

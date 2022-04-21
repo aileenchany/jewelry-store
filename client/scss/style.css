@@ -1,11 +1,13 @@
 /* Imported Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@300;400;500;700&display=swap');
 
 body {
   margin: 0;
   padding: 0;
   color: #50613f;
   background-color: rgb(243, 239, 231);
+  font-family: 'Krub', sans-serif;
 }
 
 .container-fluid {
@@ -17,6 +19,15 @@ body {
 h1 {
   font-family: 'Neonderthaw', cursive;
   font-size: 6rem;
+  margin: 0;
+}
+h3,
+p {
+  margin: 5px auto;
+  padding: 0;
+}
+p {
+  font-size: 0.85rem;
 }
 
 .hero-content {
@@ -24,7 +35,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 300px;
   margin: 0;
   padding: 0;
 }
@@ -35,4 +46,19 @@ h1 {
   justify-content: center;
   align-items: center;
   margin: 20px auto 30px;
+}
+
+.items-container {
+  display: flex;
+  justify-content: space-around;
+}
+.single-item-container {
+  background: white;
+  width: 280px;
+}
+.item-img {
+  display: block;
+  margin: 20px auto 10px;
+  width: 230px;
+  height: 200px;
 }
