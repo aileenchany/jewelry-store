@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const apiRouter = require('./routes/api');
-const PORT = process.env.PORT || 3000;
+const adminController = require('./controllers/adminController');
+// const apiRouter = require('./routes/api');
+// const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 //
 /**
  * handle parsing request body
@@ -18,7 +20,7 @@ app.use(express.static(path.resolve(__dirname, '../client')));
 /**
  * define route handlers
  */
-app.use('/api', apiRouter); //add a new entry to DB
+// app.use('/api', apiRouter); //add a new entry to DB
 
 // app.get('/api/leaders', (req, res) => {
 //   return res.status(200).send(leaderList);
@@ -28,6 +30,10 @@ app.get('/', (req, res) => {
   return res.status(200).sendFile(path.join(__dirname, '../index.html'));
 });
 
+app.post('/admin', adminController.addItem, (req, res) => {
+  console.log('req.body received by app.post: ', req.body);
+  return res.status(200).json(res.locals.item);
+});
 // app.get('/login', (req, res) => {
 //   return res.status(200).sendFile(path.join(__dirname, '../index.html'));
 // });

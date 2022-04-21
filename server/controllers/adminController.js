@@ -1,16 +1,29 @@
 // Student.create() ==> returns a promise
 const { Inventory } = require('../models/jewelryModel');
-
+// const Inventory = require('../models/jewelryModel');
 const adminController = {};
 
-adminController.addItem = (req, res, next) => {
+adminController.addItem = async (req, res, next) => {
+  console.log('Hello from admin controller', req.body);
   //console.log(req)
   //write a db query to Inventory.create({...}).then().catch()
   //Shanon said she prefers promise chaining, but I could do async/await
-
   //Make
   //res.locals.newKey = value;
-  return next();
+  const { title, description, img, qty, price } = req.body;
+  try {
+    const dbQuery = await Inventory.create({
+      title,
+      description,
+      img,
+      qty,
+      price,
+    });
+    res.locals.item = dbQuery;
+    return next();
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 module.exports = adminController;

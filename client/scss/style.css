@@ -1,11 +1,38 @@
+/* Imported Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+
 body {
   margin: 0;
   padding: 0;
-  color: #393939;
-  background-color: #fff;
+  color: #50613f;
+  background-color: rgb(243, 239, 231);
 }
 
-.container {
+.container-fluid {
   margin: 0 auto;
-  max-width: 80%;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Neonderthaw', cursive;
+  font-size: 6rem;
+}
+
+.hero-content {
+  background: url('https://images.unsplash.com/photo-1566146991394-b09a95e80d17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+}
+.add-item-form {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto 30px;
 }

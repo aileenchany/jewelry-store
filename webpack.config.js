@@ -6,10 +6,10 @@ module.exports = {
   entry: './client/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
-    publicPath: '/build/',
+    publicPath: '/',
     filename: 'bundle.js',
   },
-  devtool: 'eval-source-map',
+  // devtool: 'eval-source-map',
   module: {
     rules: [
       {
@@ -42,18 +42,18 @@ module.exports = {
     ],
   },
   devServer: {
-    host: 'localhost',
-    port: 8080,
+    // host: 'localhost',
+    // port: 8080,
     // enable HMR on the devServer
-    hot: true,
+    // hot: true,
     // fallback to root for other urls
-    historyApiFallback: true,
+    // historyApiFallback: true,
     static: {
       directory: path.resolve(__dirname, 'build'),
       publicPath: '/',
     },
     proxy: {
-      '/api': 'http://localhost:3000',
+      '/': 'http://localhost:3000/',
     },
   },
   plugins: [
