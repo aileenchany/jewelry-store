@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <div className='hero-content'>
       <h1>Jewelry Store</h1>
-      <p>A jewelry marketplace.</p>
+      <p className='hero-tagline'>A jewelry marketplace.</p>
     </div>
   );
 }

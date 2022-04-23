@@ -149,6 +149,8 @@ class MainContainer extends Component {
               <p>
                 <strong>Price:</strong> ${item.price}.00 usd
               </p>
+              <button className='updateBtn'>Update</button>
+              <button className='deleteBtn'>Delete</button>
             </div>
           ))}
         </div>

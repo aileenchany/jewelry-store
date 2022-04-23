@@ -18,6 +18,7 @@ body {
 
 h1 {
   font-family: 'Neonderthaw', cursive;
+  text-shadow: 2px 2px 2px white;
   font-size: 6rem;
   margin: 0;
 }
@@ -29,23 +30,37 @@ p {
 p {
   font-size: 0.85rem;
 }
+input {
+  margin: 5px;
+  width: 300px;
+}
 
 .hero-content {
+  display: flex;
+  flex-direction: column;
   background: url('https://images.unsplash.com/photo-1566146991394-b09a95e80d17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  justify-content: center;
+  align-items: center;
   height: 300px;
   margin: 0;
   padding: 0;
 }
+.hero-tagline {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #50613f;
+}
 .add-item-form {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 400px;
   justify-content: center;
   align-items: center;
-  margin: 20px auto 30px;
+  margin: 20px auto 20px;
 }
 
 .items-container {
@@ -61,4 +76,9 @@ p {
   margin: 20px auto 10px;
   width: 230px;
   height: 200px;
+}
+
+.updateBtn,
+.deleteBtn {
+  margin: 10px 10px 20px;
 }
